@@ -1,7 +1,7 @@
 // Create a map object
 var myMap = L.map("map-id", {
   center: [37.09, -95.71],
-  zoom: 5
+  zoom: 4
 });
 
 L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
@@ -21,8 +21,8 @@ for (var i = 0; i < myData.length; i++) {
     color: "white",
     fillColor: "blue",
     radius: 120000
-  }).bindPopup("<h1> Type of labour for " 
-  + myData[i].name + "</h1>" + '<div id = container width="200" height="200">' + "</div>" ).addTo(myMap);
+  }).bindPopup("<h3> Type of labour for " 
+  + myData[i].name + "</h3>" + '<div id = chart-container width="200" height="200">' + "</div>" ).addTo(myMap);
   mkr.myData=myData[i];
   mkr.on("popupopen",popchart)
 }
@@ -62,7 +62,7 @@ function popchart(event){
                     // display the chart in the container
                     window.setTimeout(() => {
                       chart.data(data);
-                      chart.container('container');
+                      chart.container('chart-container');
                       chart.draw();
                     }, 200)
                     

@@ -142,7 +142,7 @@ function style(feature) {
   }).addTo(myMap);
 
   // Set up the legend
-  var legend = L.control({ position: "bottomright" });
+  var legend = L.control({ position: "bottomleft" });
   legend.onAdd = function() {
     var div = L.DomUtil.create("div", "info legend");
     var limits = geojson.options.limits;

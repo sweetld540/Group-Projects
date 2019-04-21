@@ -1,10 +1,9 @@
-<!doctype html>
-<html lang="en">
- <head>
-  <meta charset="UTF-8">
-  <meta content="IE=edge" http-equiv="X-UA-Compatible">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
-  <title>Column Chart with Columns Overlap</title>
+{% extends "base-template.html" %}
+{% block title %}Means of Control By Age{% endblock %}
+{% block content %}
+<div style="height:100%">
+  <!-- d3 JavaScript -->
+  <script src="https://d3js.org/d3.v4.min.js"></script>
   <link href="https://playground.anychart.com/gallery/Column_Charts/Column_Chart_with_Columns_Overlap/iframe" rel="canonical">
   <meta content="Animation,Bar Chart,Column Chart,Tooltip" name="keywords">
   <meta content="AnyChart - JavaScript Charts designed to be embedded and integrated" name="description">
@@ -15,12 +14,10 @@
   <link href="https://cdn.anychart.com/releases/v8/css/anychart-ui.min.css?hcode=be5162d915534272a57d0bb781d27f2b" rel="stylesheet" type="text/css">
   <link href="https://cdn.anychart.com/releases/v8/fonts/css/anychart-font.min.css?hcode=be5162d915534272a57d0bb781d27f2b" rel="stylesheet" type="text/css">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='control-age-style.css') }}">
- </head>
- <body>
-  <div id="container"></div>
+  <div id="chart-container"></div>
   <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js?hcode=be5162d915534272a57d0bb781d27f2b"></script>
   <script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js?hcode=be5162d915534272a57d0bb781d27f2b"></script>
   <script src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js?hcode=be5162d915534272a57d0bb781d27f2b"></script>
   <script src="{{ url_for('static', filename='control-age-logic.js') }}"></script>
- </body>
-</html>
+</div>
+{% endblock %}
